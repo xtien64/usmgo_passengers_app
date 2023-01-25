@@ -75,6 +75,176 @@ class _MainScreenState extends State<MainScreen>
   String userRideRequestStatus="";
   bool requestPositionInfo = true;
 
+
+
+
+  blackThemeGoogleMap()
+  {
+    newGoogleMapController!.setMapStyle('''
+                    [
+                      {
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#242f3e"
+                          }
+                        ]
+                      },
+                      {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#746855"
+                          }
+                        ]
+                      },
+                      {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                          {
+                            "color": "#242f3e"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "administrative.locality",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#d59563"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#d59563"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#263c3f"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#6b9a76"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#596578"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                          {
+                            "color": "#212a37"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#9ca5b3"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#746855"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                          {
+                            "color": "#1f2835"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#f3d19c"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#2f3948"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "transit.station",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#d59563"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                          {
+                            "color": "#17263c"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                          {
+                            "color": "#515c6d"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "water",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                          {
+                            "color": "#304b73"
+                          }
+                        ]
+                      }
+                    ]
+                ''');
+  }
+
   checkIfLocationPermissionAllowed() async
   {
     _locationPermission = await Geolocator.requestPermission();
@@ -506,7 +676,7 @@ class _MainScreenState extends State<MainScreen>
 
           //custom hamburger button for drawer
           Positioned(
-            top: 30,
+            top: 50,
             left: 14,
             child: GestureDetector(
               onTap: ()
@@ -522,7 +692,7 @@ class _MainScreenState extends State<MainScreen>
                 }
               },
               child: CircleAvatar(
-                backgroundColor: Colors.grey,
+                backgroundColor: Colors.white,
                 child: Icon(
                   openNavigationDrawer ? Icons.menu : Icons.close,
                   color: Colors.black54,
@@ -549,26 +719,26 @@ class _MainScreenState extends State<MainScreen>
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
                   child: Column(
                     children: [
                       //from
                       Row(
                         children: [
-                          const Icon(Icons.add_location_alt_outlined, color: Colors.grey,),
+                          const Icon(Icons.add_location_alt_outlined, color: Colors.black54,),
                           const SizedBox(width: 12.0,),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
                                 "From",
-                                style: TextStyle(color: Colors.grey, fontSize: 12),
+                                style: TextStyle(color: Colors.black54, fontSize: 12),
                               ),
                               Text(
                                 Provider.of<AppInfo>(context).userPickUpLocation != null
                                     ? (Provider.of<AppInfo>(context).userPickUpLocation!.locationName!).substring(0,24) + "..."
                                     : "not getting address",
-                                style: const TextStyle(color: Colors.grey, fontSize: 14),
+                                style: const TextStyle(color: Colors.black54, fontSize: 14),
                               ),
                             ],
                           ),
@@ -580,7 +750,7 @@ class _MainScreenState extends State<MainScreen>
                       const Divider(
                         height: 1,
                         thickness: 1,
-                        color: Colors.grey,
+                        color: Colors.black54,
                       ),
 
                       const SizedBox(height: 16.0),
@@ -604,20 +774,20 @@ class _MainScreenState extends State<MainScreen>
                         },
                         child: Row(
                           children: [
-                            const Icon(Icons.add_location_alt_outlined, color: Colors.grey,),
+                            const Icon(Icons.add_location_alt_outlined, color: Colors.black54,),
                             const SizedBox(width: 12.0,),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
                                   "To",
-                                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                                  style: TextStyle(color: Colors.black54, fontSize: 12),
                                 ),
                                 Text(
                                   Provider.of<AppInfo>(context).userDropOffLocation != null
                                       ? Provider.of<AppInfo>(context).userDropOffLocation!.locationName!
                                       : "Where to go?",
-                                  style: const TextStyle(color: Colors.grey, fontSize: 14),
+                                  style: const TextStyle(color: Colors.black54, fontSize: 14),
                                 ),
                               ],
                             ),
@@ -651,7 +821,7 @@ class _MainScreenState extends State<MainScreen>
                           }
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.green,
+                          primary: Colors.blueAccent,
                           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)
                         ),
                       ),
@@ -862,7 +1032,7 @@ class _MainScreenState extends State<MainScreen>
 
     setState(() {
       Polyline polyline = Polyline(
-        color: Colors.purpleAccent,
+        color: Colors.lightBlueAccent,
         polylineId: const PolylineId("PolylineID"),
         jointType: JointType.round,
         points: pLineCoOrdinatesList,
@@ -904,14 +1074,14 @@ class _MainScreenState extends State<MainScreen>
       markerId: const MarkerId("originID"),
       infoWindow: InfoWindow(title: originPosition.locationName, snippet: "Origin"),
       position: originLatLng,
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
     );
 
     Marker destinationMarker = Marker(
       markerId: const MarkerId("destinationID"),
       infoWindow: InfoWindow(title: destinationPosition.locationName, snippet: "Destination"),
       position: destinationLatLng,
-      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
     );
 
     setState(() {
@@ -921,7 +1091,7 @@ class _MainScreenState extends State<MainScreen>
 
     Circle originCircle = Circle(
       circleId: const CircleId("originID"),
-      fillColor: Colors.green,
+      fillColor: Colors.orangeAccent,
       radius: 12,
       strokeWidth: 3,
       strokeColor: Colors.white,
@@ -930,7 +1100,7 @@ class _MainScreenState extends State<MainScreen>
 
     Circle destinationCircle = Circle(
       circleId: const CircleId("destinationID"),
-      fillColor: Colors.red,
+      fillColor: Colors.orangeAccent,
       radius: 12,
       strokeWidth: 3,
       strokeColor: Colors.white,

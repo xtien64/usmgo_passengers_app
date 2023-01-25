@@ -19,7 +19,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               userModelCurrentInfo!.name!,
               style: const TextStyle(
                 fontSize: 50.0,
-                color: Colors.white,
+                color: Colors.grey,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                   SystemNavigator.pop();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white54,
+                  primary: Colors.blue,
                 ),
                 child: const Text(
                   "Close",

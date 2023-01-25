@@ -25,14 +25,15 @@ class _MyDrawerState extends State<MyDrawer>
   Widget build(BuildContext context)
   {
     return Drawer(
+      backgroundColor: Colors.white,
       child: ListView(
         children: [
           //drawer header
           Container(
             height: 165,
-            color: Colors.grey,
+            color: Colors.lightBlue,
             child: DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.black),
+              decoration: const BoxDecoration(color: Colors.white),
               child: Row(
                 children: [
                   const Icon(
@@ -78,11 +79,12 @@ class _MyDrawerState extends State<MyDrawer>
               Navigator.push(context, MaterialPageRoute(builder: (c)=> TripsHistoryScreen()));
             },
             child: const ListTile(
-              leading: Icon(Icons.history, color: Colors.white54,),
+              tileColor: Colors.white,
+              leading: Icon(Icons.history, color: Colors.grey,),
               title: Text(
                 "History",
                 style: TextStyle(
-                  color: Colors.white54
+                  color: Colors.grey,
                 ),
               ),
             ),
@@ -94,11 +96,12 @@ class _MyDrawerState extends State<MyDrawer>
               Navigator.push(context, MaterialPageRoute(builder: (c)=> ProfileScreen()));
             },
             child: const ListTile(
-              leading: Icon(Icons.person, color: Colors.white54,),
+              tileColor: Colors.white,
+              leading: Icon(Icons.person, color: Colors.grey,),
               title: Text(
                 "Visit Profile",
                 style: TextStyle(
-                    color: Colors.white54
+                    color: Colors.grey
                 ),
               ),
             ),
@@ -110,11 +113,12 @@ class _MyDrawerState extends State<MyDrawer>
               Navigator.push(context, MaterialPageRoute(builder: (c)=> AboutScreen()));
             },
             child: const ListTile(
-              leading: Icon(Icons.info, color: Colors.white54,),
+              tileColor: Colors.white,
+              leading: Icon(Icons.info, color: Colors.grey,),
               title: Text(
                 "About",
                 style: TextStyle(
-                    color: Colors.white54
+                    color: Colors.grey
                 ),
               ),
             ),
@@ -127,11 +131,12 @@ class _MyDrawerState extends State<MyDrawer>
               Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
             },
             child: const ListTile(
-              leading: Icon(Icons.logout, color: Colors.white54,),
+              tileColor: Colors.white,
+              leading: Icon(Icons.logout, color: Colors.grey,),
               title: Text(
                 "Sign Out",
                 style: TextStyle(
-                    color: Colors.white54
+                    color: Colors.grey
                 ),
               ),
             ),
