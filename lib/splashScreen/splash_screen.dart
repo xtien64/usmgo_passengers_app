@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/authentication/login_screen.dart';
 import 'package:users_app/global/global.dart';
@@ -49,21 +50,21 @@ class _MySplashScreenState extends State<MySplashScreen>
   {
     return Material(
       child: Container(
-        color: Colors.black,
+        color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              Image.asset("images/logo.png"),
+              Image.asset("images/driver.jpg"),
 
               const SizedBox(height: 10,),
 
               const Text(
-                "Uber & inDriver Clone App",
+                "USM Go",
                 style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
+                  fontSize: 32,
+                  color: Colors.black54,
                   fontWeight: FontWeight.bold
                 ),
               ),

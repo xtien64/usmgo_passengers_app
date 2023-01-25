@@ -49,18 +49,18 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           //search place ui
           Container(
             height: 160,
             decoration: const BoxDecoration(
-              color: Colors.black54,
+              color: Colors.blue,
               boxShadow:
               [
                 BoxShadow(
-                  color: Colors.white54,
+                  color: Colors.black54,
                   blurRadius: 8,
                   spreadRadius: 0.5,
                   offset: Offset(
@@ -87,16 +87,16 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen>
                         },
                         child: const Icon(
                           Icons.arrow_back,
-                          color: Colors.grey,
+                          color: Colors.white,
                         ),
                       ),
 
                       const Center(
                         child: Text(
-                          "Search & Set DropOff Location",
+                          "DropOff Location",
                           style: TextStyle(
                             fontSize: 18.0,
-                            color: Colors.grey,
+                            color: Colors.black54,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -111,7 +111,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen>
 
                       const Icon(
                         Icons.adjust_sharp,
-                        color: Colors.grey,
+                        color: Colors.white,
                       ),
 
                       const SizedBox(width: 18.0,),
@@ -125,7 +125,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen>
                               findPlaceAutoCompleteSearch(valueTyped);
                             },
                             decoration: const InputDecoration(
-                              hintText: "search here...",
+                              hintText: "Search here...",
                               fillColor: Colors.white54,
                               filled: true,
                               border: InputBorder.none,
@@ -162,7 +162,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen>
                     {
                       return const Divider(
                         height: 1,
-                        color: Colors.white,
+                        color: Colors.black,
                         thickness: 1,
                       );
                     },

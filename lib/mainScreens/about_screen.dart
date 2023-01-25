@@ -17,7 +17,7 @@ class _AboutScreenState extends State<AboutScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: ListView(
 
         children: [
@@ -27,7 +27,7 @@ class _AboutScreenState extends State<AboutScreen>
             height: 230,
             child: Center(
               child: Image.asset(
-                "images/car_logo.png",
+                "images/driver.jpg",
                 width: 260,
               ),
             ),
@@ -41,7 +41,7 @@ class _AboutScreenState extends State<AboutScreen>
                 "Uber & inDriver Clone",
                 style: TextStyle(
                   fontSize: 28,
-                  color: Colors.white54,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -51,30 +51,32 @@ class _AboutScreenState extends State<AboutScreen>
               ),
 
               //about you & your company - write some info
-              const Text(
-                "This app has been developed by Muhammad Ali, "
-                "This is the world number 1 ride sharing app. Available for all. "
-                "20M+ people already use this app.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white54,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const Text(
+                  "This app is developed by Alive Team, ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black54,
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: const Text(
+                  "This is the ride sharing app for USMians. Available for all USM staff and student. ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black54,
+                  ),
                 ),
               ),
 
               const SizedBox(
                 height: 10,
-              ),
-
-              const Text(
-                "This app has been developed by Muhammad Ali, "
-                    "This is the world number 1 ride sharing app. Available for all. "
-                    "20M+ people already use this app.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white54,
-                ),
               ),
 
               const SizedBox(
@@ -88,7 +90,7 @@ class _AboutScreenState extends State<AboutScreen>
                   SystemNavigator.pop();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white54,
+                  primary: Colors.blue,
                 ),
                 child: const Text(
                   "Close",
