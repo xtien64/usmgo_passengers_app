@@ -5,6 +5,7 @@ import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/authentication/login_screen.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/mainScreens/main_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class MySplashScreen extends StatefulWidget
@@ -60,12 +61,20 @@ class _MySplashScreenState extends State<MySplashScreen>
 
               const SizedBox(height: 10,),
 
-              const Text(
-                "USM Go",
-                style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black54,
-                  fontWeight: FontWeight.bold
+              Text(
+                "USM GO",
+                style: GoogleFonts.aBeeZee(
+                    fontSize: 45,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+              Text(
+                "Your Carpooling App",
+                style: GoogleFonts.josefinSans(
+                    fontSize: 25,
+                    color: Colors.black54,
+                    fontStyle: FontStyle.italic
                 ),
               ),
 

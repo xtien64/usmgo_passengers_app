@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class AboutScreen extends StatefulWidget
@@ -37,12 +38,12 @@ class _AboutScreenState extends State<AboutScreen>
             children: [
 
               //company name
-              const Text(
-                "Uber & inDriver Clone",
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+              Text(
+                "USM GO",
+                style: GoogleFonts.aBeeZee(
+                    fontSize: 45,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
                 ),
               ),
 
