@@ -78,172 +78,7 @@ class _MainScreenState extends State<MainScreen>
 
 
 
-  blackThemeGoogleMap()
-  {
-    newGoogleMapController!.setMapStyle('''
-                    [
-                      {
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#242f3e"
-                          }
-                        ]
-                      },
-                      {
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#746855"
-                          }
-                        ]
-                      },
-                      {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                          {
-                            "color": "#242f3e"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "administrative.locality",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#d59563"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "poi",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#d59563"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "poi.park",
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#263c3f"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "poi.park",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#6b9a76"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road",
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#596578"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                          {
-                            "color": "#212a37"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#9ca5b3"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road.highway",
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#746855"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                          {
-                            "color": "#1f2835"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "road.highway",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#f3d19c"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "transit",
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#2f3948"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "transit.station",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#d59563"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [
-                          {
-                            "color": "#17263c"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "water",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                          {
-                            "color": "#515c6d"
-                          }
-                        ]
-                      },
-                      {
-                        "featureType": "water",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                          {
-                            "color": "#304b73"
-                          }
-                        ]
-                      }
-                    ]
-                ''');
-  }
+
 
   checkIfLocationPermissionAllowed() async
   {
@@ -841,7 +676,7 @@ class _MainScreenState extends State<MainScreen>
             child: Container(
               height: waitingResponseFromDriverContainerHeight,
               decoration: const BoxDecoration(
-                color: Colors.black87,
+                color: Colors.blue,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   topLeft: Radius.circular(20),
@@ -854,15 +689,15 @@ class _MainScreenState extends State<MainScreen>
                     animatedTexts: [
                       FadeAnimatedText(
                         'Waiting for Response\nfrom Driver',
-                        duration: const Duration(seconds: 6),
+                        duration: const Duration(seconds: 10),
                         textAlign: TextAlign.center,
-                        textStyle: const TextStyle(fontSize: 30.0, color: Colors.white, fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontSize: 30.0, color: Colors.black87, fontWeight: FontWeight.bold),
                       ),
                       ScaleAnimatedText(
                         'Please wait...',
                         duration: const Duration(seconds: 10),
                         textAlign: TextAlign.center,
-                        textStyle: const TextStyle(fontSize: 32.0, color: Colors.white, fontFamily: 'Canterbury'),
+                        textStyle: const TextStyle(fontSize: 32.0, color: Colors.black87, fontFamily: 'Canterbury'),
                       ),
                     ],
                   ),
@@ -879,7 +714,7 @@ class _MainScreenState extends State<MainScreen>
             child: Container(
               height: assignedDriverInfoContainerHeight,
               decoration: const BoxDecoration(
-                color: Colors.black87,
+                color: Colors.white54,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   topLeft: Radius.circular(20),
@@ -900,7 +735,7 @@ class _MainScreenState extends State<MainScreen>
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white54,
+                          color: Colors.black87,
                         ),
                       ),
                     ),
@@ -912,7 +747,7 @@ class _MainScreenState extends State<MainScreen>
                     const Divider(
                       height: 2,
                       thickness: 2,
-                      color: Colors.white54,
+                      color: Colors.black87,
                     ),
 
                     const SizedBox(
@@ -925,7 +760,7 @@ class _MainScreenState extends State<MainScreen>
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.white54,
+                        color: Colors.black87,
                       ),
                     ),
 
@@ -940,7 +775,7 @@ class _MainScreenState extends State<MainScreen>
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white54,
+                        color: Colors.black87,
                       ),
                     ),
 
@@ -951,7 +786,7 @@ class _MainScreenState extends State<MainScreen>
                     const Divider(
                       height: 2,
                       thickness: 2,
-                      color: Colors.white54,
+                      color: Colors.black87,
                     ),
 
                     const SizedBox(
@@ -966,7 +801,7 @@ class _MainScreenState extends State<MainScreen>
 
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.green,
+                            primary: Colors.blue,
                           ),
                           icon: const Icon(
                             Icons.phone_android,
@@ -1091,7 +926,7 @@ class _MainScreenState extends State<MainScreen>
 
     Circle originCircle = Circle(
       circleId: const CircleId("originID"),
-      fillColor: Colors.orangeAccent,
+      fillColor: Colors.lightBlue.shade100,
       radius: 12,
       strokeWidth: 3,
       strokeColor: Colors.white,
@@ -1100,7 +935,7 @@ class _MainScreenState extends State<MainScreen>
 
     Circle destinationCircle = Circle(
       circleId: const CircleId("destinationID"),
-      fillColor: Colors.orangeAccent,
+      fillColor: Colors.lightBlue.shade100,
       radius: 12,
       strokeWidth: 3,
       strokeColor: Colors.white,

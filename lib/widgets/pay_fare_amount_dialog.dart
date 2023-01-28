@@ -29,7 +29,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
         margin: const EdgeInsets.all(6),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.black87,
+          color: Colors.white54,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Column(
@@ -42,7 +42,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
               "Fare Amount".toUpperCase(),
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.grey,
+                color: Colors.black87,
                 fontSize: 16,
               ),
             ),
@@ -60,7 +60,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
               widget.fareAmount.toString(),
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.grey,
+                color: Colors.black87,
                 fontSize: 50,
               ),
             ),
@@ -73,7 +73,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
                 "This is the total trip fare amount, Please Pay it to the driver.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: Colors.black87,
                 ),
               ),
             ),
@@ -84,7 +84,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
               padding: const EdgeInsets.all(18.0),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                  primary: Colors.blue,
                 ),
                 onPressed: ()
                 {
@@ -105,7 +105,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog>
                       ),
                     ),
                     Text(
-                      "\$  " + widget.fareAmount!.toString(),
+                      "RM  " + widget.fareAmount!.toString(),
                       style: const TextStyle(
                         fontSize: 20,
                         color: Colors.white,

@@ -48,7 +48,7 @@ class _SelectNearestActiveDriversScreenState extends State<SelectNearestActiveDr
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueGrey[200],
       appBar: AppBar(
         backgroundColor: Colors.white54,
         title: const Text(
@@ -84,9 +84,9 @@ class _SelectNearestActiveDriversScreenState extends State<SelectNearestActiveDr
               Navigator.pop(context, "driverChoosed");
             },
             child: Card(
-              color: Colors.grey,
+              color: Colors.blueGrey[50],
               elevation: 3,
-              shadowColor: Colors.green,
+              shadowColor: Colors.grey,
               margin: const EdgeInsets.all(8),
               child: ListTile(
                 leading: Padding(
@@ -103,14 +103,14 @@ class _SelectNearestActiveDriversScreenState extends State<SelectNearestActiveDr
                       dList[index]["name"],
                       style: const TextStyle(
                         fontSize: 14,
-                        color: Colors.black54,
+                        color: Colors.black87,
                       ),
                     ),
                     Text(
                       dList[index]["car_details"]["car_model"],
                       style: const TextStyle(
                         fontSize: 12,
-                        color: Colors.white54,
+                        color: Colors.black38,
                       ),
                     ),
                     SmoothStarRating(
@@ -127,7 +127,7 @@ class _SelectNearestActiveDriversScreenState extends State<SelectNearestActiveDr
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "\$ " + getFareAmountAccordingToVehicleType(index),
+                      "RM " + getFareAmountAccordingToVehicleType(index),
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),

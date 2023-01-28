@@ -32,7 +32,7 @@ class _HistoryDesignUIWidgetState extends State<HistoryDesignUIWidget>
   Widget build(BuildContext context)
   {
     return Container(
-      color: Colors.black54,
+      color: Colors.white54,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Column(
@@ -57,7 +57,7 @@ class _HistoryDesignUIWidgetState extends State<HistoryDesignUIWidget>
                 const SizedBox(width: 12,),
 
                 Text(
-                  "\$ " + widget.tripsHistoryModel!.fareAmount!,
+                  "RM " + widget.tripsHistoryModel!.fareAmount!,
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

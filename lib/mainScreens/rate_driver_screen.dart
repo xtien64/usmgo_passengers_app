@@ -64,8 +64,8 @@ class _RateDriverScreenState extends State<RateDriverScreen>
                 rating: countRatingStars,
                 allowHalfRating: false,
                 starCount: 5,
-                color: Colors.green,
-                borderColor: Colors.green,
+                color: Colors.blue,
+                borderColor: Colors.grey,
                 size: 46,
                 onRatingChanged: (valueOfStarsChoosed)
                 {
@@ -111,7 +111,7 @@ class _RateDriverScreenState extends State<RateDriverScreen>
                 style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  color: Colors.blue,
                 ),
               ),
 
@@ -146,7 +146,7 @@ class _RateDriverScreenState extends State<RateDriverScreen>
                     });
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
+                    primary: Colors.blue,
                     padding: EdgeInsets.symmetric(horizontal: 74),
                   ),
                   child: const Text(

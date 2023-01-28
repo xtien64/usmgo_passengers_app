@@ -20,9 +20,9 @@ class _TripsHistoryScreenState extends State<TripsHistoryScreen>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white70,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         title: const Text(
           "Trips History"
         ),
