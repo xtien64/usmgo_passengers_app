@@ -27,18 +27,31 @@ class _SelectNearestActiveDriversScreenState extends State<SelectNearestActiveDr
   {
     if(tripDirectionDetailsInfo != null)
     {
-      if(dList[index]["car_details"]["type"].toString() == "bike")
+      if(dList[index]["car_details"]["type"].toString() == "1")
       {
-        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!) / 2).toStringAsFixed(1);
+        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!) ).toString();
       }
-      if(dList[index]["car_details"]["type"].toString() == "uber-x") //means executive type of car - more comfortable pro level
-      {
-        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!) * 2).toStringAsFixed(1);
-      }
-      if(dList[index]["car_details"]["type"].toString() == "uber-go") // non - executive car - comfortable
+      if(dList[index]["car_details"]["type"].toString() == "2")
       {
         fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!)).toString();
       }
+      if(dList[index]["car_details"]["type"].toString() == "3")
+      {
+        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!)).toString();
+      }
+      if(dList[index]["car_details"]["type"].toString() == "4")
+      {
+        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!)).toString();
+      }
+      if(dList[index]["car_details"]["type"].toString() == "5")
+      {
+        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!)).toString();
+      }
+      if(dList[index]["car_details"]["type"].toString() == "6")
+      {
+        fareAmount = (AssistantMethods.calculateFareAmountFromOriginToDestination(tripDirectionDetailsInfo!)).toString();
+      }
+
     }
     return fareAmount;
   }
